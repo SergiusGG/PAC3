@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <script src="./js/main.js" defer></script>
+  <script src="./js/temaOscuro.js" defer></script>
+
+  <title>Document</title>
+</head>
+<header>
+  <img src="./img/moon.png" alt="" id="icon">
+</header>
+<body>
+  <!-- <h1>Pokedex</h1> -->
+  <img src="./img/Pokédex_logo.png" alt="">
+  <form action="" id="fetchPkm">
+    <button type="search" name="pokemonFetch" id="numberPkm" value="" placeholder="Numero pokemon" >Número de Pokemon</button>
+  </form>
+    <form action="" onsubmit="searchPokemon(event)">
+        <input class="buscar" type="text" name="pokemon1" autocomplete="off" placeholder="Buscar pokemon">
+    </form>
+    <section id="cards1" class="cards1"></section>
+
+    <template id="template">
+        <article id="" class="card">
+            <img src="" alt="pokemon">
+            <p class="numero"></p>
+            <p class="name"></p>
+            <p class="attack"></p>
+            <p class="defense"></p>
+           
+               <button   id="" class="info" onclick="display(id)"></button>
+           
+
+
+        </article>
+    </template>
+
+    <section id="cards3" class="newCards3"></section>
+
+    <template id="template3" class="template3">
+      
+        <article id="" class="card3">
+          <span class="close" onclick="noDisplay2()">&times;</span>
+
+            <img src="" alt="pokemon3">
+            <p class="numero3"></p>
+            <p class="name3"></p>
+            <p class="attack3"></p>
+            <p class="defense3"></p>
+         
+        </article>
+    </template>
+
+    <section id="cards2" class="cards2"></section>
+
+    <template id="template2">
+        <article id="" class="card2">
+            <img src="" alt="pokemon2">
+            <p class="numero2"></p>
+            <p class="name2"></p>
+            <p class="attack2"></p>
+            <p class="defense2"></p>
+            <button  id="" class="info2" onclick="display(id)"></button>
+      
+
+        </article>
+    </template>
+</body>
+</html>
