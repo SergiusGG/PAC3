@@ -54,6 +54,8 @@ let number=clonedTemplate.querySelector(".numero3");
 let name=clonedTemplate.querySelector(".name3");
 let attack=clonedTemplate.querySelector(".attack3");
 let defense=clonedTemplate.querySelector(".defense3");
+let tipo1=clonedTemplate.querySelector(".tipo1");
+// let tipo2=clonedTemplate.querySelector(".tipo2");
 let noInfo=clonedTemplate.querySelector(".close");
 
 card.setAttribute("id", `#${pokemon.id.toString().padStart(3,0)}` );
@@ -62,9 +64,25 @@ number.textContent=`Número pokedex: #${pokemon.id.toString().padStart(3,0)}`;
 name.textContent=`Nombre: ${pokemon.name}`;
 attack.textContent=`Ataque físico: ${pokemon.stats[1].base_stat}`;
 defense.textContent=`Defensa física: ${pokemon.stats[2].base_stat}`;
+// tipo1.textContent=`Tipo 1: ${pokemon.types[0].type.name}`;
+// tipo2.textContent=`Tipo 2: ${pokemon.types[1].type.name}`;
 noInfo.setAttribute("id", pokemon.id );
 
+if(pokemon.types.length>=2){
+  tipo1.textContent=`Tipo: ${pokemon.types[0].type.name} & ${pokemon.types[1].type.name}`;
+// tipo2.textContent=`Tipo 2:`;
+}else if(pokemon.types.length==1){
+  tipo1.textContent=`Tipo: ${pokemon.types[0].type.name}`;
 
+}
+// let txt = "";
+// tipo1.forEach(myFunction);
+// document.querySelector(".tipo1").innerHTML = txt;
+
+// function myFunction(value, index, array) {
+//   txt += value + "<br>"; 
+// }
+// tipo1.textContent=`Tipo : ${txt}`;
 noInfo.textContent="Cerrar";
 
 
@@ -113,6 +131,8 @@ function noDisplay(){
 
 
 const searchPokemon=event=>{
+  
+
   event.preventDefault();
   const {value} =event.target.pokemon1;
   fetch(`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}`)
@@ -121,6 +141,7 @@ const searchPokemon=event=>{
 }
 
 function createPokemon1(pokemon){
+  document.getElementById('cards2').innerHTML = '';
   document.querySelector("#cards1").style.display="none";
   const out =document.querySelector("#cards2");
   const temp=document.getElementById("template2");

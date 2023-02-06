@@ -6,11 +6,8 @@ body {
     background: rgb(85, 144, 189);
     text-align: center;
   }
-  
-  /* h1 {
-    color: white;
-  } */
-  .numero, .attack, .defense{
+
+.numero, .attack, .defense{
 display: none;
   }
   .numero2, .attack2, .defense2{
@@ -37,7 +34,9 @@ display: none;
   }
  
 
-
+#template{
+  margin: 2%;
+}
 
 
   #icon{
@@ -72,10 +71,14 @@ display: none;
     background: var(--primary-color) ;
 
   }
-  p, button, h1{
+  /* p{
    color:var(--secondary-color);
 
   }
+  button{
+   color:var(--secondary-color);
+
+  } */
 
 /* .card{
   width: 30%;
@@ -86,19 +89,21 @@ img{
  
 
   .newCards3{
+  
     background-color: aqua;
-
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    padding-top: 100px; 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10%;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4); 
+    background-color: rgba(0,0,0,0.4);
+    padding-bottom: 10%;
+
   }
 
   .template3 {
@@ -114,7 +119,7 @@ img{
 
   .close {
     color: white;
-    float: right;
+    /* float: right; */
     font-size: 28px;
     font-weight: bold;
   }
@@ -130,10 +135,11 @@ img{
     display: block;
     background-color: aquamarine;
     width: 70%;
-    height: 70%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
-    transform: translate(7px, 10%);
+    transform: translate(5%, 5%);
+    padding: 5%;
 }
 .card2{
   display: block;
@@ -149,10 +155,21 @@ img{
 button, .buscar{
   font-size: 3vw;
 }
+.containerPkm{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
   
+}
+.datosPkm{
+  line-height: 8vw;
+}
 @media only screen and (min-width:601px) {
+ 
   .card{
-    width: 50%;
+    width: 45%;
+    background: azure;
+    margin: 1%;
   }
   #cards1{
     display: flex;
@@ -168,11 +185,15 @@ button, .buscar{
   .card3{
     display: block;
     background-color: aquamarine;
-    width: 80%;
-    height: 70%;
+    width: 70%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
-    transform: translate(7px, 10%);
+    transform: translate(5%, 5%);
+    padding: 5%;
+}
+.card3 img{
+  width: 50vw;
 }
 .name, .name2 {
   
@@ -184,13 +205,36 @@ button, .buscar{
 /* #cards3 p{
   font-size: 1.5vw;
 } */
+
+}
+@media only screen and (min-width:768px){
+  .containerPkm{
+    display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+  }
+  .card3 img{
+    width: 25vw;
+  }
+    #cards3 p{
+    font-size: 3.5vw;
+  }
+  .datosPkm{
+    line-height: 6vw;
+  }
 }
 @media only screen and (min-width:992px) {
   .card{
-    width: 33%;
+    width: 30%;
   }
  img{
   width: 25vw;
  }
-  
+ /* .card3 img{
+  width: 25vw;
+}
+  #cards3 p{
+  font-size: 3.5vw;
+} */
 }

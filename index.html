@@ -9,19 +9,19 @@
   <script src="./js/main.js" defer></script>
   <script src="./js/temaOscuro.js" defer></script>
 
-  <title>Document</title>
+  <title>Pokedex</title>
 </head>
 <header>
   <img src="./img/moon.png" alt="" id="icon">
 </header>
 <body>
-  <!-- <h1>Pokedex</h1> -->
+
   <img src="./img/Pokédex_logo.png" alt="">
   <form action="" id="fetchPkm">
     <button type="search" name="pokemonFetch" id="numberPkm" value="" placeholder="Numero pokemon" >Número de Pokemon</button>
   </form>
     <form action="" onsubmit="searchPokemon(event)">
-        <input class="buscar" type="text" name="pokemon1" autocomplete="off" placeholder="Buscar pokemon">
+        <input class="buscar" type="search" name="pokemon1" autocomplete="off" placeholder="Buscar pokemon">
     </form>
     <section id="cards1" class="cards1"></section>
 
@@ -43,15 +43,23 @@
     <section id="cards3" class="newCards3"></section>
 
     <template id="template3" class="template3">
-      
+     
         <article id="" class="card3">
-          <span class="close" onclick="noDisplay2()">&times;</span>
-
-            <img src="" alt="pokemon3">
-            <p class="numero3"></p>
+           <span class="close" onclick="noDisplay2()">&times;</span>
+<div class="containerPkm">
+   <img src="" alt="pokemon3">
+   <div class="datosPkm">
+           <p class="numero3"></p>
             <p class="name3"></p>
             <p class="attack3"></p>
             <p class="defense3"></p>
+            <p class="tipo1"></p>
+   </div>
+     
+</div>
+           
+            <!-- <p class="tipo2"></p> -->
+
          
         </article>
     </template>
