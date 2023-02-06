@@ -29,7 +29,6 @@ display: none;
   .name, .name2 {
     text-transform: capitalize;
     font-weight: bold;
-    /* font-size: 1.2rem; */
     font-size: 6vw;
   }
  
@@ -59,30 +58,7 @@ display: none;
   body{
     background: var(--primary-color) ;
   }
-  #template, #template2{
-    background: var(--primary-color) ;
-
-  }
-  .card, .card2{
-    background: var(--primary-color) ;
-
-  }
-  #cards1, #cards2{
-    background: var(--primary-color) ;
-
-  }
-  /* p{
-   color:var(--secondary-color);
-
-  }
-  button{
-   color:var(--secondary-color);
-
-  } */
-
-/* .card{
-  width: 30%;
-} */
+  
 img{
   width: 50vw;
 }
@@ -116,11 +92,13 @@ img{
     
   }
   
-
+.info, .info2{
+  padding: 2%;
+  margin-top: 10%;
+}
   .close {
     color: white;
-    /* float: right; */
-    font-size: 28px;
+    font-size: 3vw;
     font-weight: bold;
   }
   
@@ -143,12 +121,11 @@ img{
 }
 .card2{
   display: block;
-  width: 70%;
-  height: 70%;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
-  transform: translate(7px, 10%);
 }
+
 #cards3 p{
   font-size: 5.5vw;
 }
@@ -164,12 +141,23 @@ button, .buscar{
 .datosPkm{
   line-height: 8vw;
 }
+.card, .cards2{
+  background: azure;
+  margin: 5%;
+  padding-bottom: 5%;
+}
+#cards2{
+  display: none;
+  width: 50%;
+    margin: 10% auto;
+}
 @media only screen and (min-width:601px) {
  
   .card{
     width: 45%;
     background: azure;
     margin: 1%;
+    padding-bottom: 5%;
   }
   #cards1{
     display: flex;
@@ -202,9 +190,6 @@ button, .buscar{
 button, .buscar{
   font-size: 1vw;
 }
-/* #cards3 p{
-  font-size: 1.5vw;
-} */
 
 }
 @media only screen and (min-width:768px){
@@ -231,10 +216,5 @@ button, .buscar{
  img{
   width: 25vw;
  }
- /* .card3 img{
-  width: 25vw;
-}
-  #cards3 p{
-  font-size: 3.5vw;
-} */
+ 
 }
